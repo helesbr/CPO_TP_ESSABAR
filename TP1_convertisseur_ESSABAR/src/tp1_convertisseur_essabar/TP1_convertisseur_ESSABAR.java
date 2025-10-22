@@ -4,6 +4,8 @@
  */
 package tp1_convertisseur_essabar;
 
+import java.util.Scanner;
+
 /**
  *
  * @author helia
@@ -14,7 +16,51 @@ public class TP1_convertisseur_ESSABAR {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println(" Bonjour saisissez une valeur : ");
+        double valeur = sc.nextDouble();
+        System.out.println("Saisissez la conversion que vous souhaiter effectuer : \n 1) De Celcius vers Kelvin \n 2) De Kelvin vers Celcius \n 3) Farenheit vers Celcius \n 4) Celcius vers Farenheit \n 5) Kelvin vers Farenheit \n 6) Farenheit vers Kelvin ");
+        double conversion = sc.nextDouble();
+        
+        if (conversion == 1){
+        double tKelvin = CelciusVersKelvin(valeur);    
+            System.out.println(tKelvin);
+                    }
+        else if (conversion ==2){
+        double tCelcius = KelvinVersCelcius(valeur);
+        System.out.println(tCelcius);
+    }
+        else if (conversion ==3) {
+            double tCelcius = CelciusVersFarenheit(valeur);
+            System.out.println(tCelcius);
+        }
+        
+        else if (conversion ==4) {
+            double tFarenheit = CelciusVersFarenheit(tKelvin); 
+        System.out.println(tFarenheit);
+        }
+        
+        else if (conversion ==5) {
+            double tFarenheit = 
+        }
+        double tKelvin = 0;
         // TODO code application logic here
     }
+
+    public static double CelciusVersKelvin(double valeur) {
+        double b = valeur + 273;
+        return b;
+    }
+
+    public static double KelvinVersCelcius(double valeur) {
+        double c = valeur - 273;
+        return c;
+    }
+
+    public static double CelciusVersFarenheit(double valeur) {
+        double d = tCelcius * 9 / 5 + 32;
+        return d;
+    }
     
+        
 }
