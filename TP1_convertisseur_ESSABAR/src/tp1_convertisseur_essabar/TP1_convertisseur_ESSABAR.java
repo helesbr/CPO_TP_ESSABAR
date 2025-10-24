@@ -21,29 +21,27 @@ public class TP1_convertisseur_ESSABAR {
         double valeur = sc.nextDouble();
         System.out.println("Saisissez la conversion que vous souhaiter effectuer : \n 1) De Celcius vers Kelvin \n 2) De Kelvin vers Celcius \n 3) Farenheit vers Celcius \n 4) Celcius vers Farenheit \n 5) Kelvin vers Farenheit \n 6) Farenheit vers Kelvin ");
         double conversion = sc.nextDouble();
-        
-        if (conversion == 1){
-        double tKelvin = CelciusVersKelvin(valeur);    
+
+        if (conversion == 1) {
+            double tKelvin = CelciusVersKelvin(valeur);
             System.out.println(tKelvin);
-                    }
-        else if (conversion ==2){
-        double tCelcius = KelvinVersCelcius(valeur);
-        System.out.println(tCelcius);
-    }
-        else if (conversion ==3) {
-            double tCelcius = CelciusVersFarenheit(valeur);
+        } else if (conversion == 2) {
+            double tCelcius = KelvinVersCelcius(valeur);
             System.out.println(tCelcius);
+        } else if (conversion == 3) {
+            double tCelcius = FarenheitVersCelcius(valeur);
+            System.out.println(tCelcius);
+        } else if (conversion == 4) {
+            double tFarenheit = CelciusVersFarenheit(valeur);
+            System.out.println(tFarenheit);
+        } else if (conversion == 5) {
+            double tFarenheit = CelciusVersFarenheit(KelvinVersCelcius(valeur));
+            System.out.println(tFarenheit);
+        } else if (conversion == 6) {
+            double tKelvin = CelciusVersKelvin(FarenheitVersCelcius(valeur));
+            System.out.println(tKelvin);
         }
-        
-        else if (conversion ==4) {
-            double tFarenheit = CelciusVersFarenheit(tKelvin); 
-        System.out.println(tFarenheit);
-        }
-        
-        else if (conversion ==5) {
-            double tFarenheit = 
-        }
-        double tKelvin = 0;
+
         // TODO code application logic here
     }
 
@@ -58,9 +56,13 @@ public class TP1_convertisseur_ESSABAR {
     }
 
     public static double CelciusVersFarenheit(double valeur) {
-        double d = tCelcius * 9 / 5 + 32;
+        double d = (valeur * (9.0 / 5.0)) + 32;
         return d;
     }
-    
-        
+
+    public static double FarenheitVersCelcius(double valeur) {
+        double e = (valeur - 32) * (5.0 / 9.0);
+        return e;
+    }
+
 }
