@@ -24,22 +24,22 @@ public class TP1_convertisseur_ESSABAR {
 
         if (conversion == 1) {
             double tKelvin = CelciusVersKelvin(valeur);
-            System.out.println(tKelvin);
+            System.out.println(valeur +" degre Celcius est egal a "+ tKelvin+ " degres Kelvin ");
         } else if (conversion == 2) {
             double tCelcius = KelvinVersCelcius(valeur);
-            System.out.println(tCelcius);
+            System.out.println(valeur +" degre Kelvin est egal a "+tCelcius+ " degres Kelvin");
         } else if (conversion == 3) {
             double tCelcius = FarenheitVersCelcius(valeur);
-            System.out.println(tCelcius);
+            System.out.println(valeur+ " degre Farenheit est egal a "+ tCelcius+ " degres Celcius");
         } else if (conversion == 4) {
             double tFarenheit = CelciusVersFarenheit(valeur);
-            System.out.println(tFarenheit);
+            System.out.println(valeur+ " degre Celcius est egal a "+ tFarenheit+ " degre Farenheit");
         } else if (conversion == 5) {
             double tFarenheit = CelciusVersFarenheit(KelvinVersCelcius(valeur));
-            System.out.println(tFarenheit);
+            System.out.println(valeur+ " degre Kelvin est egal a "+ tFarenheit +" degres Farenheit");
         } else if (conversion == 6) {
             double tKelvin = CelciusVersKelvin(FarenheitVersCelcius(valeur));
-            System.out.println(tKelvin);
+            System.out.println(valeur+ " degre Farenheit est egal a "+ tKelvin + " degres Kelvin");
         }
 
         // TODO code application logic here
