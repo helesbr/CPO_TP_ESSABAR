@@ -27,7 +27,7 @@ public class TP1_stats_ESSABAR {
             Tab[n] += 1;
         }
         for (int i = 0; i < Tab.length; i++) {
-            System.out.print(" Face "+ (i+1)+ " : " +(Tab[i])/m*100);
+            System.out.print(" Face "+ (i+1)+ " : " +(Tab[i])/m*100+"%");
         }
     }
 
