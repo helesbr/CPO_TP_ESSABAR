@@ -9,30 +9,47 @@ package tp2_convertisseurobjet_essabar;
  * @author helia
  */
 public class Convertisseur {
+
     int nbConversions = 0;
-    
-public double CelciusVersKelvin(double valeur){
-    double nbConversions = valeur + 273;
-        return nbConversions;
-}
-public double KelvinVersCelcius(double valeur) {
-        double nbConversions = valeur - 273;
-        return nbConversions;
-}
- public double FarenheitVersCelcius(double valeur) {
-        double nbConversions = (valeur - 32) * (5.0 / 9.0);
-        return nbConversions;
- }
- public double CelciusVersFarenheit(double valeur) {
-        double nbConversions = (valeur * (9.0 / 5.0)) + 32;
-        return nbConversions;
+
+    public double CelciusVersKelvin(double valeur) {
+        nbConversions++;
+        return valeur + 273;
     }
- public double FarenheitVersKelvin (double valeur){
-     double nbConversions = CelciusVersKelvin(FarenheitVersCelcius(valeur));
- return nbConversions;
- }
- public double KelvinversFarenheit (double valeur){
-  double nbConversions = CelciusVersFarenheit(KelvinVersCelcius(valeur));    
- return nbConversions;
- }
+
+    public double KelvinVersCelcius(double valeur) {
+        nbConversions++;
+        return valeur - 273;
+    }
+
+    public double FarenheitVersCelcius(double valeur) {
+        nbConversions++;
+        return (valeur - 32) * (5.0 / 9.0);
+    }
+
+    public double CelciusVersFarenheit(double valeur) {
+        nbConversions++;
+        return (valeur * (9.0 / 5.0)) + 32;
+    }
+
+    public double KelvinversFarenheit(double valeur) {
+        nbConversions--;
+        return CelciusVersFarenheit(KelvinVersCelcius(valeur));
+        
+    }
+
+    public double FarenheitVersKelvin(double valeur) {
+        nbConversions--;
+        return CelciusVersKelvin(FarenheitVersCelcius(valeur));
+    }
+
+    @Override
+    public String toString() {
+        return "nb de conversions" + nbConversions;
+    }
+
+    public void afficherNombreConversions() {
+        System.out.println("nombres de converssions effectuees : " + nbConversions);
+    }
+
 }
