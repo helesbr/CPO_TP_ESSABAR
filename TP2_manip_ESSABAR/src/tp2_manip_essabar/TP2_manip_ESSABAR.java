@@ -24,6 +24,12 @@ public class TP2_manip_ESSABAR {
         assiette3 = assiette1;
         assiette1= assiette2;
         assiette2= assiette3;
+        
+        Moussaka[] tabMoussaka = new Moussaka [10]; 
+        
+        for (int i=0; i<tabMoussaka.length; i++){
+            tabMoussaka[i]= new Moussaka(100+i);
     }
     
+}
 }
