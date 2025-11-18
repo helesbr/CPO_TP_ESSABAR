@@ -4,6 +4,9 @@
  */
 package tp3_heroic_fantasy_essabar;
 
+import Personnages.Personnage;
+import Personnages.Magicien;
+import Personnages.Guerrier;
 import Armes.Baton;
 import Armes.Epee;
 import Armes.Arme;
@@ -24,6 +27,7 @@ public class TP3_Heroic_Fantasy_ESSABAR {
         Baton baton1 = new Baton("Chene", 4, 5);
         Baton baton2 = new Baton("Charme", 5, 6);
         System.out.println(epee1);
+
         ArrayList<Arme> Tab1 = new ArrayList<Arme>();
 
         Tab1.add(epee1);
@@ -34,23 +38,34 @@ public class TP3_Heroic_Fantasy_ESSABAR {
         for (int i = 0; i < Tab1.size(); i++) {
             Arme armeCourante = Tab1.get(i);
             System.out.println("Arme " + i + " : " + armeCourante);
+        }
+        Magicien magicien1 = new Magicien("Gandalf", 65, true);
+        Magicien magicien2 = new Magicien("Garcimore", 44, false);
+        Guerrier guerrier1 = new Guerrier("Conan", 78, false);
+        Guerrier guerrier2 = new Guerrier("Lannister", 45, true);
+        Guerrier guerrier3 = new Guerrier("Yuji", 100, true);
+        ArrayList<Personnage> Tab2 = new ArrayList<Personnage>();
+        Tab2.add(guerrier1);
+        Tab2.add(guerrier2);
+        Tab2.add(magicien1);
+        Tab2.add(magicien2);
+        Tab2.add(guerrier3);
 
-            Magicien magicien1 = new Magicien("Gandalf", 65, true);
-            Magicien magicien2 = new Magicien("Garcimore", 44, false);
-            Guerrier guerrier1 = new Guerrier("Conan", 78, false);
-            Guerrier guerrier2 = new Guerrier("Lannister", 45, true);
+        
+        guerrier3.ajouterArme(baton1);
+        guerrier3.ajouterArme(epee1);
+        guerrier3.ajouterArme(epee2);
+        guerrier3.Arme_en_Main(epee1);
+        
+        magicien2.ajouterArme(baton1);
+        magicien2.ajouterArme(baton2);
+        magicien2.ajouterArme(epee1);
+        System.out.println("Voici le nombre d'armes preferees du magicien2 : " + magicien2.nbArmes.size());
 
-            ArrayList<Personnage> Tab2 = new ArrayList<Personnage>();
-            Tab2.add(guerrier1);
-            Tab2.add(guerrier2);
-            Tab2.add(magicien1);
-            Tab2.add(magicien2);
+        for (int a = 0; a < Tab2.size(); a++) {
+            Personnage personangeCourant = Tab2.get(a);
+            System.out.println("Personnage " + a + " : " + personangeCourant);
 
-            for (int a = 0; a < Tab2.size(); a++) {
-                Personnage personangeCourant = Tab2.get(a);
-                System.out.println("Personnage " + a + " : " + personangeCourant);
-
-            }
         }
     }
 }

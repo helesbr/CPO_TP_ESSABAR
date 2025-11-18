@@ -18,6 +18,10 @@ public abstract class Arme {
         this.niveauAttaque = niveauAttaque;
     }
 
+    public String getNom() {
+        return nom;
+    }
+
     @Override
     public String toString() {
         return "Nom : " + nom + " | Niveau d'attaque : " + niveauAttaque;
