@@ -2,21 +2,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package tp3_heroic_fantasy_essabar;
+package Armes;
+
+import Armes.Arme;
 
 /**
  *
  * @author helia
  */
-public class Baton extends Arme {
+public class Epee extends Arme {
 
-    int age;
+    int finesse;
 
-    public Baton(String nom, int niveauAttaque, int age) {
+    public Epee(String nom, int niveauAttaque, int finesse) {
         super(nom, niveauAttaque);
-        if (age > 100) {
-            age = 100;
+        if (finesse > 100) {
+            finesse = 100;
         }
-        this.age = age;
+        this.finesse = finesse;
+
     }
 }

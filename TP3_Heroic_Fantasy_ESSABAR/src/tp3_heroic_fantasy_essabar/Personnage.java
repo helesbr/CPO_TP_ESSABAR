@@ -8,18 +8,27 @@ package tp3_heroic_fantasy_essabar;
  *
  * @author helia
  */
-public abstract class Arme {
-
+public abstract class Personnage {
     String nom;
-    int niveauAttaque;
+    int niveauDeVie;
 
-    public Arme(String nom, int niveauAttaque) {
+    public Personnage(String nom, int niveauDeVie) {
         this.nom = nom;
-        this.niveauAttaque = niveauAttaque;
+        this.niveauDeVie = niveauDeVie;
     }
 
+    public String getNom() {
+        return nom;
+    }
+
+    public int getNiveauDeVie() {
+        return niveauDeVie;
+    }
+    
     @Override
     public String toString() {
-        return "Nom : " + nom + " | Niveau d'attaque : " + niveauAttaque;
+        return "Personnage : " + nom + " | Niveau de vie : " + niveauDeVie;
+    
     }
+    
 }
