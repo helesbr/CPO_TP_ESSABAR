@@ -64,6 +64,17 @@ public abstract class Personnage implements EtreVivant {
         
     }
 
+    public void attaquer(Personnage ciblee){
+        int points=0;
+          if(this instanceof Magicien){
+            points=20;
+          }
+          else{
+              points=30;
+          }
+            ciblee.estAttaque(points);
+        
+        }
     
     
     
@@ -78,6 +89,7 @@ public abstract class Personnage implements EtreVivant {
         }
     return "Personnage : " + nom + " | Niveau de vie : " + niveauDeVie+ " Arme en main "+ infoArme;
     }
+    
     @Override
     public void finalize() throws Throwable{
         nbPerso--;
@@ -103,4 +115,5 @@ public abstract class Personnage implements EtreVivant {
     public void estAttaque(int points){
         niveauDeVie-=points;
     }
+    
 }

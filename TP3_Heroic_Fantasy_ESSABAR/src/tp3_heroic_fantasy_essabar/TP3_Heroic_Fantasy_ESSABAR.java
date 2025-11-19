@@ -52,7 +52,6 @@ public class TP3_Heroic_Fantasy_ESSABAR {
         Tab2.add(magicien1);
         Tab2.add(magicien2);
         Tab2.add(guerrier3);
-
         
         guerrier3.ajouterArme(baton1);
         guerrier3.ajouterArme(epee1);
@@ -65,10 +64,29 @@ public class TP3_Heroic_Fantasy_ESSABAR {
         magicien2.ajouterArme(epee1);
         System.out.println("Voici le nombre d'armes preferees du magicien2 : " + magicien2.nbArmes.size());
 
+        
+        Guerrier guerrier4 = new Guerrier("Ragnar", 200, true);
+        Magicien magicien4 = new Magicien("wizard", 60, false);
+        
+        Tab2.add(guerrier4);
+        Tab2.add(magicien4);
+        
+        guerrier4.seFatiguer();
+        
+        if(guerrier4.estVivant()){
+            System.out.println("Le guerrier est toujours vivant");
+        }
+        else {
+            System.out.println("Le guerrier est mort");
+        }
+        
+        guerrier4.attaquer(magicien4);
+        
         for (int a = 0; a < Tab2.size(); a++) {
             Personnage personangeCourant = Tab2.get(a);
             System.out.println("Personnage " + a + " : " + personangeCourant);
 
         }
+        
     }
 }
