@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Personnages;
+import tp3_heroic_fantasy_essabar.EtreVivant;
 import Armes.Arme; 
 import java.util.ArrayList;
 
@@ -10,14 +11,16 @@ import java.util.ArrayList;
  *
  * @author helia
  */
-public abstract class Personnage {
+public abstract class Personnage implements EtreVivant {
     String nom;
     int niveauDeVie;
     Arme armeActuelle=null;
+    int nbPerso=0;
 
     public Personnage(String nom, int niveauDeVie) {
         this.nom = nom;
         this.niveauDeVie = niveauDeVie;
+        nbPerso++;
     }
 
     public String getNom() {
@@ -63,6 +66,7 @@ public abstract class Personnage {
 
     
     
+    
     @Override
     public String toString() {
         String infoArme;
@@ -73,6 +77,30 @@ public abstract class Personnage {
             infoArme="aucune";
         }
     return "Personnage : " + nom + " | Niveau de vie : " + niveauDeVie+ " Arme en main "+ infoArme;
+    }
+    @Override
+    public void finalize() throws Throwable{
+        nbPerso--;
+        super.finalize();
+    }
     
-}
+    @Override
+    public void seFatiguer(){
+       niveauDeVie-=10; 
+    }
+    
+    @Override
+    public boolean estVivant(){
+        if(niveauDeVie>0){
+           return true;
+        }
+        else {
+            return false;
+        }
+    }
+    
+    @Override 
+    public void estAttaque(int points){
+        niveauDeVie-=points;
+    }
 }

@@ -44,7 +44,9 @@ public class TP3_Heroic_Fantasy_ESSABAR {
         Guerrier guerrier1 = new Guerrier("Conan", 78, false);
         Guerrier guerrier2 = new Guerrier("Lannister", 45, true);
         Guerrier guerrier3 = new Guerrier("Yuji", 100, true);
+        
         ArrayList<Personnage> Tab2 = new ArrayList<Personnage>();
+        
         Tab2.add(guerrier1);
         Tab2.add(guerrier2);
         Tab2.add(magicien1);
@@ -59,6 +61,7 @@ public class TP3_Heroic_Fantasy_ESSABAR {
         
         magicien2.ajouterArme(baton1);
         magicien2.ajouterArme(baton2);
+        
         magicien2.ajouterArme(epee1);
         System.out.println("Voici le nombre d'armes preferees du magicien2 : " + magicien2.nbArmes.size());
 
