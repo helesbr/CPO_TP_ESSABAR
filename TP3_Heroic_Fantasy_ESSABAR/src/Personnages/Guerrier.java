@@ -9,6 +9,7 @@ package Personnages;
  * @author helia
  */
 public class Guerrier extends Personnage {
+
     private boolean cheval;
 
     public Guerrier(String nom, int niveauDeVie, boolean confirmé) {
@@ -19,8 +20,13 @@ public class Guerrier extends Personnage {
     public void setCheval(boolean cheval) {
         this.cheval = cheval;
     }
+
+    public boolean isCheval() {
+        return cheval;
+    }
+
     @Override
     public String toString() {
         return super.toString() + " | A cheval : " + cheval;
-}
+    }
 }

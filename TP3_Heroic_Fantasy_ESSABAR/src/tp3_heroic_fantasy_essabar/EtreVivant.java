@@ -9,7 +9,10 @@ package tp3_heroic_fantasy_essabar;
  * @author helia
  */
 public interface EtreVivant {
+
     public abstract void seFatiguer();
+
     public abstract boolean estVivant();
+
     public abstract void estAttaque(int points);
 }

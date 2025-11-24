@@ -9,7 +9,8 @@ package Personnages;
  * @author helia
  */
 public class Magicien extends Personnage {
-   private boolean confirmé;
+
+    private boolean confirmé;
 
     public Magicien(String nom, int niveauDeVie, boolean confirmé) {
         super(nom, niveauDeVie);
@@ -19,11 +20,15 @@ public class Magicien extends Personnage {
     public void setConfirmé(boolean confirmé) {
         this.confirmé = confirmé;
     }
+
+    public boolean isConfirme() {
+        return confirmé;
+    }
+
     @Override
     public String toString() {
         return super.toString() + " | Confirme : " + confirmé;
-    
+
     }
-    
-    
+
 }

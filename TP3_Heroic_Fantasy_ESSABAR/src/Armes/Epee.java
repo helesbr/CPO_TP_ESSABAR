@@ -4,8 +4,6 @@
  */
 package Armes;
 
-import Armes.Arme;
-
 /**
  *
  * @author helia
@@ -22,4 +20,10 @@ public class Epee extends Arme {
         this.finesse = finesse;
 
     }
+
+    @Override
+    public int getFinesse() {
+        return finesse;
+    }
+
 }

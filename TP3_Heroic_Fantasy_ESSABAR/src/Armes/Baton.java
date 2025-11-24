@@ -4,8 +4,6 @@
  */
 package Armes;
 
-import Armes.Arme;
-
 /**
  *
  * @author helia
@@ -13,6 +11,11 @@ import Armes.Arme;
 public class Baton extends Arme {
 
     int age;
+
+    @Override
+    public int getAge() {
+        return age;
+    }
 
     public Baton(String nom, int niveauAttaque, int age) {
         super(nom, niveauAttaque);
