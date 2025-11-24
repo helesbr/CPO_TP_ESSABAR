@@ -81,10 +81,9 @@ public abstract class Personnage implements EtreVivant {
         if ((this instanceof Magicien && ((Magicien) this).isConfirme())
                 || (this instanceof Guerrier && ((Guerrier) this).isCheval())) {
             points /= 2;
-            ciblee.estAttaque(points);
-            this.seFatiguer();
         }
-
+        ciblee.estAttaque(points);
+        this.seFatiguer();
     }
 
     @Override

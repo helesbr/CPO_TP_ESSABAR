@@ -78,6 +78,8 @@ public class TP3_Heroic_Fantasy_ESSABAR {
         guerrier3.Arme_en_Main(epee1);
         guerrier4.ajouterArme(epee4);
         guerrier5.ajouterArme(epee4);
+        guerrier4.Arme_en_Main(epee4);
+        guerrier5.Arme_en_Main(epee4);
         
         magicien2.ajouterArme(baton1);
         magicien2.ajouterArme(baton2);
