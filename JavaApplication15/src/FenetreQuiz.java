@@ -153,19 +153,17 @@ public class FenetreQuiz extends javax.swing.JFrame {
                         .addComponent(lblQuestion, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblFeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
                         .addComponent(btnRep1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnRep2)
                         .addGap(18, 18, 18)
-                        .addComponent(btnRep3, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnRep4, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(173, 173, 173)
-                        .addComponent(lblFeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnRep3, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnRep4, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 12, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -207,7 +205,6 @@ public class FenetreQuiz extends javax.swing.JFrame {
 
     private void btnRep1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRep1ActionPerformed
 
-        btnRep1.setText("bouton 1");
         int reponseChoisie = 1;
         Question questionCourante = questions.get(indexQuestionCourante);
         if (reponseChoisie == questionCourante.getIndexBonneReponse()) {
@@ -226,7 +223,7 @@ public class FenetreQuiz extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRep1ActionPerformed
 
     private void btnRep2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRep2ActionPerformed
-        btnRep2.setText("bouton 2");
+   
         int reponseChoisie = 2;
         Question questionCourante = questions.get(indexQuestionCourante);
         if (reponseChoisie == questionCourante.getIndexBonneReponse()) {
@@ -245,7 +242,7 @@ public class FenetreQuiz extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRep2ActionPerformed
 
     private void btnRep3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRep3ActionPerformed
-        btnRep3.setText("bouton 3");
+      
         int reponseChoisie = 3;
         Question questionCourante = questions.get(indexQuestionCourante);
         if (reponseChoisie == questionCourante.getIndexBonneReponse()) {
@@ -264,7 +261,7 @@ public class FenetreQuiz extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRep3ActionPerformed
 
     private void btnRep4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRep4ActionPerformed
-        btnRep4.setText("bouton 4");
+        
         int reponseChoisie = 4;
         Question questionCourante = questions.get(indexQuestionCourante);
         if (reponseChoisie == questionCourante.getIndexBonneReponse()) {
