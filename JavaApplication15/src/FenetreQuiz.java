@@ -198,8 +198,9 @@ public class FenetreQuiz extends javax.swing.JFrame {
         } else {
             lblScore.setText("Quiz terminé Score : " + scoreCourant + " / " + indexQuestionCourante);
             btnNextQuestion.setEnabled(false);
-        }
-
+        FrameVictoire v = new FrameVictoire();
+        v.setVisible(true);}
+        
 
     }//GEN-LAST:event_btnNextQuestionActionPerformed
 
