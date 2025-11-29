@@ -194,6 +194,7 @@ public class FenetreQuiz extends javax.swing.JFrame {
         indexQuestionCourante++;
         if (indexQuestionCourante < questions.size()) {
             afficherQuestionCourante();
+            lblFeedback.setText("Feedback");
 
         } else {
             lblScore.setText("Quiz terminé Score : " + scoreCourant + " / " + indexQuestionCourante);
