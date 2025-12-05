@@ -8,7 +8,10 @@
  * @author helia
  */
 public class fenetre_cadenas extends javax.swing.JFrame {
-    private int nbCourant;
+    private int nbCourant0;
+    private int nbCourant1;
+    private int nbCourant2;
+    private int nbCourant3;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(fenetre_cadenas.class.getName());
 
     /**
@@ -177,49 +180,73 @@ public class fenetre_cadenas extends javax.swing.JFrame {
                     }// </editor-fold>//GEN-END:initComponents
 
     private void up_chiffre_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_1ActionPerformed
-        if(nbCourant<9){
-           nbCourant++;
+        if(nbCourant0<9){
+           nbCourant0++;
         }
         else {
-                   nbCourant=0;
+                   nbCourant0=0;
                    }
-        texte_chiffre_0.setText(nbCourant+ "");
+        texte_chiffre_0.setText(nbCourant0+ "");
     }//GEN-LAST:event_up_chiffre_1ActionPerformed
 
     private void down_chiffre_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_1ActionPerformed
-        // TODO add your handling code here:
+        if(nbCourant0>0){
+           nbCourant0--;
+        }
+        else {
+                   nbCourant0=9;
+                   }
+        texte_chiffre_0.setText(nbCourant0+ "");
     }//GEN-LAST:event_down_chiffre_1ActionPerformed
 
     private void up_chiffre_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_3ActionPerformed
-        if(nbCourant<9){
-           nbCourant++;
+        if(nbCourant2<9){
+           nbCourant2++;
         }
         else {
-                   nbCourant=0;
+                   nbCourant2=0;
                    }
-        texte_chiffre_2.setText(nbCourant+ "");
+        texte_chiffre_2.setText(nbCourant2+ "");
     }//GEN-LAST:event_up_chiffre_3ActionPerformed
 
     private void up_chiffre_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_2ActionPerformed
-        if(nbCourant<9){
-           nbCourant++;
+        if(nbCourant1<9){
+           nbCourant1++;
         }
         else {
-                   nbCourant=0;
+                   nbCourant1=0;
                    }
-        texte_chiffre_1.setText(nbCourant+ "");
+        texte_chiffre_1.setText(nbCourant1+ "");
     }//GEN-LAST:event_up_chiffre_2ActionPerformed
 
     private void down_chiffre_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_2ActionPerformed
-        // TODO add your handling code here:
+        if(nbCourant1>0){
+           nbCourant1--;
+        }
+        else {
+                   nbCourant1=9;
+                   }
+        texte_chiffre_1.setText(nbCourant1+ "");
     }//GEN-LAST:event_down_chiffre_2ActionPerformed
 
     private void down_chiffre_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_3ActionPerformed
-        // TODO add your handling code here:
+        if(nbCourant2>0){
+           nbCourant2--;
+        }
+        else {
+                   nbCourant2=9;
+                   }
+        texte_chiffre_2.setText(nbCourant2+ "");
     }//GEN-LAST:event_down_chiffre_3ActionPerformed
 
     private void down_chiffre_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_4ActionPerformed
-        // TODO add your handling code here:
+        if(nbCourant3>0){
+           nbCourant3--;
+        }
+        else {
+                   nbCourant3=9;
+                   }
+        texte_chiffre_3.setText(nbCourant3+ "");
     }//GEN-LAST:event_down_chiffre_4ActionPerformed
 
     private void bouton_testerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_testerActionPerformed
@@ -231,13 +258,13 @@ public class fenetre_cadenas extends javax.swing.JFrame {
     }//GEN-LAST:event_bouton_recommencerActionPerformed
 
     private void up_chiffre_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_4ActionPerformed
-        if(nbCourant<9){
-           nbCourant++;
+        if(nbCourant3<9){
+           nbCourant3++;
         }
         else {
-                   nbCourant=0;
+                   nbCourant3=0;
                    }
-        texte_chiffre_3.setText(nbCourant+ "");
+        texte_chiffre_3.setText(nbCourant3+ "");
     }//GEN-LAST:event_up_chiffre_4ActionPerformed
 
     /**
