@@ -8,7 +8,7 @@
  * @author helia
  */
 public class fenetre_cadenas extends javax.swing.JFrame {
-    
+    private int nbCourant;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(fenetre_cadenas.class.getName());
 
     /**
@@ -39,7 +39,6 @@ public class fenetre_cadenas extends javax.swing.JFrame {
         texte_chiffre_1 = new javax.swing.JLabel();
         texte_chiffre_2 = new javax.swing.JLabel();
         texte_chiffre_3 = new javax.swing.JLabel();
-        texte_chiffre_4 = new javax.swing.JLabel();
         bouton_tester = new javax.swing.JButton();
         texte_lbl_nb_chiffres_exacts = new javax.swing.JLabel();
         texte_nb_chiffres_exacts = new javax.swing.JLabel();
@@ -61,7 +60,7 @@ public class fenetre_cadenas extends javax.swing.JFrame {
                     up_chiffre_1ActionPerformed(evt);
                 }
             });
-            getContentPane().add(up_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 80, -1));
+            getContentPane().add(up_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 80, -1));
 
             up_chiffre_2.setText("/\\");
                 up_chiffre_2.addActionListener(new java.awt.event.ActionListener() {
@@ -69,7 +68,7 @@ public class fenetre_cadenas extends javax.swing.JFrame {
                         up_chiffre_2ActionPerformed(evt);
                     }
                 });
-                getContentPane().add(up_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 80, -1));
+                getContentPane().add(up_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 80, -1));
 
                 up_chiffre_3.setText("/\\");
                     up_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
@@ -77,7 +76,7 @@ public class fenetre_cadenas extends javax.swing.JFrame {
                             up_chiffre_3ActionPerformed(evt);
                         }
                     });
-                    getContentPane().add(up_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 80, -1));
+                    getContentPane().add(up_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 80, -1));
 
                     down_chiffre_1.setText("\\/");
                     down_chiffre_1.addActionListener(new java.awt.event.ActionListener() {
@@ -118,17 +117,13 @@ public class fenetre_cadenas extends javax.swing.JFrame {
                     getContentPane().add(texte_chiffre_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 142, 20, -1));
 
                     texte_chiffre_1.setText("1");
-                    getContentPane().add(texte_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 20, -1));
+                    getContentPane().add(texte_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 20, -1));
 
                     texte_chiffre_2.setText("2");
-                    getContentPane().add(texte_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 20, -1));
+                    getContentPane().add(texte_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 20, -1));
 
                     texte_chiffre_3.setText("3");
-                    getContentPane().add(texte_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 20, -1));
-
-                    texte_chiffre_4.setText("4");
-                    texte_chiffre_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-                    getContentPane().add(texte_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 20, -1));
+                    getContentPane().add(texte_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 20, -1));
 
                     bouton_tester.setText("Tester");
                     bouton_tester.addActionListener(new java.awt.event.ActionListener() {
@@ -136,7 +131,7 @@ public class fenetre_cadenas extends javax.swing.JFrame {
                             bouton_testerActionPerformed(evt);
                         }
                     });
-                    getContentPane().add(bouton_tester, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, -1, -1));
+                    getContentPane().add(bouton_tester, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, -1, -1));
 
                     texte_lbl_nb_chiffres_exacts.setText("Nombre de chiffres exacts : ");
                     getContentPane().add(texte_lbl_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
@@ -171,13 +166,24 @@ public class fenetre_cadenas extends javax.swing.JFrame {
                     getContentPane().add(texte_lbl_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, -1, -1));
 
                     up_chiffre_4.setText("/\\");
-                        getContentPane().add(up_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 80, -1));
+                        up_chiffre_4.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                up_chiffre_4ActionPerformed(evt);
+                            }
+                        });
+                        getContentPane().add(up_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 80, -1));
 
                         pack();
                     }// </editor-fold>//GEN-END:initComponents
 
     private void up_chiffre_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_1ActionPerformed
-        // TODO add your handling code here:
+        if(nbCourant<9){
+           nbCourant++;
+        }
+        else {
+                   nbCourant=0;
+                   }
+        texte_chiffre_0.setText(nbCourant+ "");
     }//GEN-LAST:event_up_chiffre_1ActionPerformed
 
     private void down_chiffre_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_1ActionPerformed
@@ -185,11 +191,23 @@ public class fenetre_cadenas extends javax.swing.JFrame {
     }//GEN-LAST:event_down_chiffre_1ActionPerformed
 
     private void up_chiffre_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_3ActionPerformed
-        // TODO add your handling code here:
+        if(nbCourant<9){
+           nbCourant++;
+        }
+        else {
+                   nbCourant=0;
+                   }
+        texte_chiffre_2.setText(nbCourant+ "");
     }//GEN-LAST:event_up_chiffre_3ActionPerformed
 
     private void up_chiffre_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_2ActionPerformed
-        // TODO add your handling code here:
+        if(nbCourant<9){
+           nbCourant++;
+        }
+        else {
+                   nbCourant=0;
+                   }
+        texte_chiffre_1.setText(nbCourant+ "");
     }//GEN-LAST:event_up_chiffre_2ActionPerformed
 
     private void down_chiffre_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_2ActionPerformed
@@ -211,6 +229,16 @@ public class fenetre_cadenas extends javax.swing.JFrame {
     private void bouton_recommencerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_recommencerActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bouton_recommencerActionPerformed
+
+    private void up_chiffre_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_4ActionPerformed
+        if(nbCourant<9){
+           nbCourant++;
+        }
+        else {
+                   nbCourant=0;
+                   }
+        texte_chiffre_3.setText(nbCourant+ "");
+    }//GEN-LAST:event_up_chiffre_4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -248,7 +276,6 @@ public class fenetre_cadenas extends javax.swing.JFrame {
     private javax.swing.JLabel texte_chiffre_1;
     private javax.swing.JLabel texte_chiffre_2;
     private javax.swing.JLabel texte_chiffre_3;
-    private javax.swing.JLabel texte_chiffre_4;
     private javax.swing.JLabel texte_intro;
     private javax.swing.JLabel texte_lbl_chiffres_bas;
     private javax.swing.JLabel texte_lbl_chiffres_haut;

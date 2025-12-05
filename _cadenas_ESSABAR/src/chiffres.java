@@ -16,6 +16,6 @@ private int case4;
 
     private int chiffreAleat(){
         int i = (int)(Math.random()*10);
-    
-}
+    return i;
+    }
 }
