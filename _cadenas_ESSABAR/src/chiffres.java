@@ -1,0 +1,21 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author helia
+ */
+public class chiffres {
+    
+private int case1;  
+private int case2;
+private int case3;
+private int case4;    
+
+    private int chiffreAleat(){
+        int i = (int)(Math.random()*10);
+    
+}
+}

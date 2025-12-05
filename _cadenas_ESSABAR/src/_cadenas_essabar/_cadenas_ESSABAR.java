@@ -13,8 +13,8 @@ public class _cadenas_ESSABAR {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+      private void afficher(){
+          
     }
     
 }
