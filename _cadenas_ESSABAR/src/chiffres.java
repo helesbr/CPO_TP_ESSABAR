@@ -15,7 +15,9 @@ private int case3;
 private int case4;    
 
     private int chiffreAleat(){
-        int i = (int)(Math.random()*10);
-    return i;
+        case1 = (int)(Math.random()*10);
+        case2 = (int)(Math.random()*10);
+        case3 = (int)(Math.random()*10);
+        case4 = (int)(Math.random()*10);
     }
 }
