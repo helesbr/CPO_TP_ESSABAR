@@ -19,6 +19,8 @@ public class fenetre_cadenas extends javax.swing.JFrame {
      */
     public fenetre_cadenas() {
         initComponents();
+        chiffres a = new chiffres();
+        a.chiffreAleat();
     }
 
     /**

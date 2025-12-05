@@ -14,7 +14,23 @@ private int case2;
 private int case3;
 private int case4;    
 
-    private int chiffreAleat(){
+    public int getCase1() {
+        return case1;
+    }
+
+    public int getCase2() {
+        return case2;
+    }
+
+    public int getCase3() {
+        return case3;
+    }
+
+    public int getCase4() {
+        return case4;
+    }
+
+    public void chiffreAleat(){
         case1 = (int)(Math.random()*10);
         case2 = (int)(Math.random()*10);
         case3 = (int)(Math.random()*10);
