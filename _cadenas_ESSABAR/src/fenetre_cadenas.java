@@ -52,14 +52,14 @@ public class fenetre_cadenas extends javax.swing.JFrame {
         texte_chiffre_2 = new javax.swing.JLabel();
         texte_chiffre_3 = new javax.swing.JLabel();
         bouton_tester = new javax.swing.JButton();
-        texte_lbl_nb_chiffres_exacts = new javax.swing.JLabel();
         texte_nb_chiffres_exacts = new javax.swing.JLabel();
-        texte_lbl_chiffres_haut = new javax.swing.JLabel();
+        texte_lbl_nb_chiffres_exacts = new javax.swing.JLabel();
+        texte_nb_chiffres_haut = new javax.swing.JLabel();
         texte_score = new javax.swing.JLabel();
         texte_tentatives = new javax.swing.JLabel();
         bouton_recommencer = new javax.swing.JButton();
         texte_lbl_nb_chiffres_haut = new javax.swing.JLabel();
-        texte_lbl_chiffres_bas = new javax.swing.JLabel();
+        texte_nb_chiffres_bas = new javax.swing.JLabel();
         texte_lbl_nb_chiffres_bas = new javax.swing.JLabel();
         up_chiffre_4 = new javax.swing.JButton();
 
@@ -145,14 +145,14 @@ public class fenetre_cadenas extends javax.swing.JFrame {
                     });
                     getContentPane().add(bouton_tester, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, -1, -1));
 
-                    texte_lbl_nb_chiffres_exacts.setText("Nombre de chiffres exacts : ");
-                    getContentPane().add(texte_lbl_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
+                    texte_nb_chiffres_exacts.setText("Nombre de chiffres exacts : ");
+                    getContentPane().add(texte_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
 
-                    texte_nb_chiffres_exacts.setText("0");
-                    getContentPane().add(texte_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, -1, -1));
+                    texte_lbl_nb_chiffres_exacts.setText("0");
+                    getContentPane().add(texte_lbl_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, -1, -1));
 
-                    texte_lbl_chiffres_haut.setText("Nombre de chiffres trop hauts : ");
-                    getContentPane().add(texte_lbl_chiffres_haut, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, -1, 20));
+                    texte_nb_chiffres_haut.setText("Nombre de chiffres trop hauts : ");
+                    getContentPane().add(texte_nb_chiffres_haut, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, -1, 20));
 
                     texte_score.setText("0 sur 10");
                     getContentPane().add(texte_score, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, -1, -1));
@@ -171,8 +171,8 @@ public class fenetre_cadenas extends javax.swing.JFrame {
                     texte_lbl_nb_chiffres_haut.setText("0");
                     getContentPane().add(texte_lbl_nb_chiffres_haut, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, -1, -1));
 
-                    texte_lbl_chiffres_bas.setText("Nombre de chiffres trop bas : ");
-                    getContentPane().add(texte_lbl_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
+                    texte_nb_chiffres_bas.setText("Nombre de chiffres trop bas : ");
+                    getContentPane().add(texte_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
 
                     texte_lbl_nb_chiffres_bas.setText("0");
                     getContentPane().add(texte_lbl_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, -1, -1));
@@ -252,16 +252,21 @@ public class fenetre_cadenas extends javax.swing.JFrame {
     }//GEN-LAST:event_down_chiffre_4ActionPerformed
 
     private void bouton_testerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_testerActionPerformed
-        nbEssais++;
-        texte_score.setText(nbEssais + " sur 10");
         nbExacts = 0;
         nbHauts = 0;
         nbBas = 0;
-        if (nbEssais < 11) {
-        } else {
+        if (nbEssais>=10){
             texte_intro.setText("Vous avez perdu");
-            nbEssais = 10;
             texte_score.setText(nbEssais + " sur 10");
+            up_chiffre_1.setEnabled(false);
+            down_chiffre_1.setEnabled(false);
+            up_chiffre_2.setEnabled(false);
+            down_chiffre_2.setEnabled(false);
+            up_chiffre_3.setEnabled(false);
+            down_chiffre_3.setEnabled(false);
+            up_chiffre_4.setEnabled(false);
+            down_chiffre_4.setEnabled(false);
+            bouton_tester.setEnabled(false);
             return;
         }
         if (a.getCase1() == nbCourant0) {
@@ -297,12 +302,23 @@ public class fenetre_cadenas extends javax.swing.JFrame {
             nbBas = 0;
             nbHauts = 0;
             texte_intro.setText("Vous avez gagné !");
-            texte_nb_chiffres_exacts.setText(nbExacts + "");
+            texte_lbl_nb_chiffres_exacts.setText(nbExacts + "");
             texte_lbl_nb_chiffres_haut.setText(nbHauts + "");
             texte_lbl_nb_chiffres_bas.setText(nbBas + "");
+            up_chiffre_1.setEnabled(false);
+            down_chiffre_1.setEnabled(false);
+            up_chiffre_2.setEnabled(false);
+            down_chiffre_2.setEnabled(false);
+            up_chiffre_3.setEnabled(false);
+            down_chiffre_3.setEnabled(false);
+            up_chiffre_4.setEnabled(false);
+            down_chiffre_4.setEnabled(false);
+            bouton_tester.setEnabled(false);
             return;
         } else {
-            texte_nb_chiffres_exacts.setText(nbExacts + "");
+            nbEssais++;
+            texte_score.setText(nbEssais + " sur 10");
+            texte_lbl_nb_chiffres_exacts.setText(nbExacts + "");
             texte_lbl_nb_chiffres_haut.setText(nbHauts + "");
             texte_lbl_nb_chiffres_bas.setText(nbBas + "");
         }
@@ -310,6 +326,15 @@ public class fenetre_cadenas extends javax.swing.JFrame {
     }//GEN-LAST:event_bouton_testerActionPerformed
 
     private void bouton_recommencerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_recommencerActionPerformed
+        up_chiffre_1.setEnabled(true);
+            down_chiffre_1.setEnabled(true);
+            up_chiffre_2.setEnabled(true);
+            down_chiffre_2.setEnabled(true);
+            up_chiffre_3.setEnabled(true);
+            down_chiffre_3.setEnabled(true);
+            up_chiffre_4.setEnabled(true);
+            down_chiffre_4.setEnabled(true);
+            bouton_tester.setEnabled(true);
         nbCourant0 = 0;
         nbCourant1 = 0;
         nbCourant2 = 0;
@@ -324,7 +349,7 @@ public class fenetre_cadenas extends javax.swing.JFrame {
         nbHauts = 0;
         nbBas = 0;
         texte_intro.setText("Trouvez le bon code en moins de 10 tentatives ! ");
-            texte_nb_chiffres_exacts.setText(nbExacts + "");
+            texte_lbl_nb_chiffres_exacts.setText(nbExacts + "");
             texte_lbl_nb_chiffres_haut.setText(nbHauts + "");
             texte_lbl_nb_chiffres_bas.setText(nbBas + "");
         a.chiffreAleat();
@@ -377,12 +402,12 @@ public class fenetre_cadenas extends javax.swing.JFrame {
     private javax.swing.JLabel texte_chiffre_2;
     private javax.swing.JLabel texte_chiffre_3;
     private javax.swing.JLabel texte_intro;
-    private javax.swing.JLabel texte_lbl_chiffres_bas;
-    private javax.swing.JLabel texte_lbl_chiffres_haut;
     private javax.swing.JLabel texte_lbl_nb_chiffres_bas;
     private javax.swing.JLabel texte_lbl_nb_chiffres_exacts;
     private javax.swing.JLabel texte_lbl_nb_chiffres_haut;
+    private javax.swing.JLabel texte_nb_chiffres_bas;
     private javax.swing.JLabel texte_nb_chiffres_exacts;
+    private javax.swing.JLabel texte_nb_chiffres_haut;
     private javax.swing.JLabel texte_score;
     private javax.swing.JLabel texte_tentatives;
     private javax.swing.JButton up_chiffre_1;
