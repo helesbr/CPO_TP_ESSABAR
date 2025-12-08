@@ -8,6 +8,7 @@
  * @author helia
  */
 public class fenetre_cadenas extends javax.swing.JFrame {
+
     private int nbCourant0;
     private int nbCourant1;
     private int nbCourant2;
@@ -26,7 +27,7 @@ public class fenetre_cadenas extends javax.swing.JFrame {
         initComponents();
         a = new chiffres();
         a.chiffreAleat();
-       
+
     }
 
     /**
@@ -188,155 +189,155 @@ public class fenetre_cadenas extends javax.swing.JFrame {
                     }// </editor-fold>//GEN-END:initComponents
 
     private void up_chiffre_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_1ActionPerformed
-        if(nbCourant0<9){
-           nbCourant0++;
+        if (nbCourant0 < 9) {
+            nbCourant0++;
+        } else {
+            nbCourant0 = 0;
         }
-        else {
-                   nbCourant0=0;
-                   }
-        texte_chiffre_0.setText(nbCourant0+ "");
+        texte_chiffre_0.setText(nbCourant0 + "");
     }//GEN-LAST:event_up_chiffre_1ActionPerformed
 
     private void down_chiffre_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_1ActionPerformed
-        if(nbCourant0>0){
-           nbCourant0--;
+        if (nbCourant0 > 0) {
+            nbCourant0--;
+        } else {
+            nbCourant0 = 9;
         }
-        else {
-                   nbCourant0=9;
-                   }
-        texte_chiffre_0.setText(nbCourant0+ "");
+        texte_chiffre_0.setText(nbCourant0 + "");
     }//GEN-LAST:event_down_chiffre_1ActionPerformed
 
     private void up_chiffre_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_3ActionPerformed
-        if(nbCourant2<9){
-           nbCourant2++;
+        if (nbCourant2 < 9) {
+            nbCourant2++;
+        } else {
+            nbCourant2 = 0;
         }
-        else {
-                   nbCourant2=0;
-                   }
-        texte_chiffre_2.setText(nbCourant2+ "");
+        texte_chiffre_2.setText(nbCourant2 + "");
     }//GEN-LAST:event_up_chiffre_3ActionPerformed
 
     private void up_chiffre_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_2ActionPerformed
-        if(nbCourant1<9){
-           nbCourant1++;
+        if (nbCourant1 < 9) {
+            nbCourant1++;
+        } else {
+            nbCourant1 = 0;
         }
-        else {
-                   nbCourant1=0;
-                   }
-        texte_chiffre_1.setText(nbCourant1+ "");
+        texte_chiffre_1.setText(nbCourant1 + "");
     }//GEN-LAST:event_up_chiffre_2ActionPerformed
 
     private void down_chiffre_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_2ActionPerformed
-        if(nbCourant1>0){
-           nbCourant1--;
+        if (nbCourant1 > 0) {
+            nbCourant1--;
+        } else {
+            nbCourant1 = 9;
         }
-        else {
-                   nbCourant1=9;
-                   }
-        texte_chiffre_1.setText(nbCourant1+ "");
+        texte_chiffre_1.setText(nbCourant1 + "");
     }//GEN-LAST:event_down_chiffre_2ActionPerformed
 
     private void down_chiffre_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_3ActionPerformed
-        if(nbCourant2>0){
-           nbCourant2--;
+        if (nbCourant2 > 0) {
+            nbCourant2--;
+        } else {
+            nbCourant2 = 9;
         }
-        else {
-                   nbCourant2=9;
-                   }
-        texte_chiffre_2.setText(nbCourant2+ "");
+        texte_chiffre_2.setText(nbCourant2 + "");
     }//GEN-LAST:event_down_chiffre_3ActionPerformed
 
     private void down_chiffre_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_4ActionPerformed
-        if(nbCourant3>0){
-           nbCourant3--;
+        if (nbCourant3 > 0) {
+            nbCourant3--;
+        } else {
+            nbCourant3 = 9;
         }
-        else {
-                   nbCourant3=9;
-                   }
-        texte_chiffre_3.setText(nbCourant3+ "");
+        texte_chiffre_3.setText(nbCourant3 + "");
     }//GEN-LAST:event_down_chiffre_4ActionPerformed
 
     private void bouton_testerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_testerActionPerformed
         nbEssais++;
-        texte_score.setText(nbEssais+" sur 10");
-        nbExacts=0;
-        nbHauts=0;
-        nbBas=0;
-        if(nbEssais<11){
-        }
-        else {
+        texte_score.setText(nbEssais + " sur 10");
+        nbExacts = 0;
+        nbHauts = 0;
+        nbBas = 0;
+        if (nbEssais < 11) {
+        } else {
             texte_intro.setText("Vous avez perdu");
-            nbEssais=10; 
-            texte_score.setText(nbEssais+" sur 10");
+            nbEssais = 10;
+            texte_score.setText(nbEssais + " sur 10");
             return;
         }
-        if (a.getCase1()==nbCourant0){
+        if (a.getCase1() == nbCourant0) {
             nbExacts++;
-    }
-        else if (nbCourant0<a.getCase1()){
-            nbBas++;            
-        }
-        else {
-            nbHauts++;
-        }
-        
-        if (a.getCase2()==nbCourant1){
-            nbExacts++;
-        }
-        else if (nbCourant1<a.getCase2()){
-            nbBas++;            
-        }
-        else {
-            nbHauts++;
-        }
-        if (a.getCase3()==nbCourant2){
-            nbExacts++;
-        }
-        else if (nbCourant2<a.getCase3()){
+        } else if (nbCourant0 < a.getCase1()) {
             nbBas++;
-        }
-        else {
+        } else {
             nbHauts++;
         }
-        if (a.getCase4()==nbCourant3){
+
+        if (a.getCase2() == nbCourant1) {
             nbExacts++;
-        }
-        else if (nbCourant3<a.getCase4()){
+        } else if (nbCourant1 < a.getCase2()) {
             nbBas++;
-        }
-        else {
+        } else {
             nbHauts++;
         }
-        if (nbExacts==4){
-            nbBas=0;
-            nbHauts=0;
+        if (a.getCase3() == nbCourant2) {
+            nbExacts++;
+        } else if (nbCourant2 < a.getCase3()) {
+            nbBas++;
+        } else {
+            nbHauts++;
+        }
+        if (a.getCase4() == nbCourant3) {
+            nbExacts++;
+        } else if (nbCourant3 < a.getCase4()) {
+            nbBas++;
+        } else {
+            nbHauts++;
+        }
+        if (nbExacts == 4) {
+            nbBas = 0;
+            nbHauts = 0;
             texte_intro.setText("Vous avez gagné !");
-            texte_nb_chiffres_exacts.setText(nbExacts+"");
-            texte_lbl_nb_chiffres_haut.setText(nbHauts+"");
-            texte_lbl_nb_chiffres_bas.setText(nbBas+"");
+            texte_nb_chiffres_exacts.setText(nbExacts + "");
+            texte_lbl_nb_chiffres_haut.setText(nbHauts + "");
+            texte_lbl_nb_chiffres_bas.setText(nbBas + "");
             return;
+        } else {
+            texte_nb_chiffres_exacts.setText(nbExacts + "");
+            texte_lbl_nb_chiffres_haut.setText(nbHauts + "");
+            texte_lbl_nb_chiffres_bas.setText(nbBas + "");
         }
-        else {
-            texte_nb_chiffres_exacts.setText(nbExacts+"");
-            texte_lbl_nb_chiffres_haut.setText(nbHauts+"");
-            texte_lbl_nb_chiffres_bas.setText(nbBas+"");
-        }
-        
+
     }//GEN-LAST:event_bouton_testerActionPerformed
 
     private void bouton_recommencerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_recommencerActionPerformed
-        
+        nbCourant0 = 0;
+        nbCourant1 = 0;
+        nbCourant2 = 0;
+        nbCourant3 = 0;
+        texte_chiffre_0.setText("0");
+        texte_chiffre_1.setText("0");
+        texte_chiffre_2.setText("0");
+        texte_chiffre_3.setText("0");
+        nbEssais = 0;
+        texte_score.setText("0 sur 10");
+        nbExacts = 0;
+        nbHauts = 0;
+        nbBas = 0;
+        texte_intro.setText("Trouvez le bon code en moins de 10 tentatives ! ");
+            texte_nb_chiffres_exacts.setText(nbExacts + "");
+            texte_lbl_nb_chiffres_haut.setText(nbHauts + "");
+            texte_lbl_nb_chiffres_bas.setText(nbBas + "");
+        a.chiffreAleat();
+
     }//GEN-LAST:event_bouton_recommencerActionPerformed
 
     private void up_chiffre_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_4ActionPerformed
-        if(nbCourant3<9){
-           nbCourant3++;
+        if (nbCourant3 < 9) {
+            nbCourant3++;
+        } else {
+            nbCourant3 = 0;
         }
-        else {
-                   nbCourant3=0;
-                   }
-        texte_chiffre_3.setText(nbCourant3+ "");
+        texte_chiffre_3.setText(nbCourant3 + "");
     }//GEN-LAST:event_up_chiffre_4ActionPerformed
 
     /**
