@@ -12,6 +12,11 @@ public class fenetre_cadenas extends javax.swing.JFrame {
     private int nbCourant1;
     private int nbCourant2;
     private int nbCourant3;
+    private int nbEssais;
+    private int nbExacts;
+    private int nbHauts;
+    private int nbBas;
+    chiffres a;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(fenetre_cadenas.class.getName());
 
     /**
@@ -19,8 +24,9 @@ public class fenetre_cadenas extends javax.swing.JFrame {
      */
     public fenetre_cadenas() {
         initComponents();
-        chiffres a = new chiffres();
+        a = new chiffres();
         a.chiffreAleat();
+       
     }
 
     /**
@@ -147,7 +153,7 @@ public class fenetre_cadenas extends javax.swing.JFrame {
                     texte_lbl_chiffres_haut.setText("Nombre de chiffres trop hauts : ");
                     getContentPane().add(texte_lbl_chiffres_haut, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, -1, 20));
 
-                    texte_score.setText("0 sur 5");
+                    texte_score.setText("0 sur 10");
                     getContentPane().add(texte_score, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, -1, -1));
 
                     texte_tentatives.setText("Tentatives");
@@ -252,11 +258,72 @@ public class fenetre_cadenas extends javax.swing.JFrame {
     }//GEN-LAST:event_down_chiffre_4ActionPerformed
 
     private void bouton_testerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_testerActionPerformed
-        // TODO add your handling code here:
+        nbEssais++;
+        texte_score.setText(nbEssais+" sur 10");
+        nbExacts=0;
+        nbHauts=0;
+        nbBas=0;
+        if(nbEssais<11){
+        }
+        else {
+            texte_intro.setText("Vous avez perdu");
+        }
+        if (a.getCase1()==nbCourant0){
+            nbExacts++;
+    }
+        else if (nbCourant0<a.getCase1()){
+            nbBas++;            
+        }
+        else {
+            nbHauts++;
+        }
+        
+        if (a.getCase2()==nbCourant1){
+            nbExacts++;
+        }
+        else if (nbCourant1<a.getCase2()){
+            nbBas++;            
+        }
+        else {
+            nbHauts++;
+        }
+        if (a.getCase3()==nbCourant2){
+            nbExacts++;
+        }
+        else if (nbCourant2<a.getCase3()){
+            nbBas++;
+        }
+        else {
+            nbHauts++;
+        }
+        if (a.getCase4()==nbCourant3){
+            nbExacts++;
+        }
+        else if (nbCourant3<a.getCase4()){
+            nbExacts++;
+        }
+        else {
+            nbHauts++;
+        }
+        if (nbExacts==4){
+            nbBas=0;
+            nbHauts=0;
+            texte_intro.setText("Vous avez gagné !");
+            texte_nb_chiffres_exacts.setText(nbExacts+"");
+            texte_lbl_nb_chiffres_haut.setText(nbHauts+"");
+            texte_lbl_nb_chiffres_bas.setText(nbBas+"");
+            return;
+        }
+        else {
+            texte_nb_chiffres_exacts.setText(nbExacts+"");
+            texte_lbl_nb_chiffres_haut.setText(nbHauts+"");
+            texte_lbl_nb_chiffres_bas.setText(nbBas+"");
+        }
+        
     }//GEN-LAST:event_bouton_testerActionPerformed
 
     private void bouton_recommencerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_recommencerActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_bouton_recommencerActionPerformed
 
     private void up_chiffre_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_4ActionPerformed
