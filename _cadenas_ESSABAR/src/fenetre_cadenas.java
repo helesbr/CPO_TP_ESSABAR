@@ -121,7 +121,7 @@ public class fenetre_cadenas extends javax.swing.JFrame {
                     });
                     getContentPane().add(down_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 75, -1));
 
-                    texte_intro.setText("Trouvez le bon code en moins de 5 tentatives ! ");
+                    texte_intro.setText("Trouvez le bon code en moins de 10 tentatives ! ");
                     getContentPane().add(texte_intro, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 6, 305, -1));
 
                     texte_chiffre_0.setText("0");
@@ -267,6 +267,7 @@ public class fenetre_cadenas extends javax.swing.JFrame {
         }
         else {
             texte_intro.setText("Vous avez perdu");
+            nbEssais=10; 
         }
         if (a.getCase1()==nbCourant0){
             nbExacts++;

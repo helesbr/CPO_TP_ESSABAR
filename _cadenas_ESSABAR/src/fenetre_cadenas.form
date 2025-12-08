@@ -118,7 +118,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="texte_intro">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Trouvez le bon code en moins de 5 tentatives ! "/>
+        <Property name="text" type="java.lang.String" value="Trouvez le bon code en moins de 10 tentatives ! "/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
