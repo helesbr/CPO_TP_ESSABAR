@@ -127,13 +127,13 @@ public class fenetre_cadenas extends javax.swing.JFrame {
                     texte_chiffre_0.setText("0");
                     getContentPane().add(texte_chiffre_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 142, 20, -1));
 
-                    texte_chiffre_1.setText("1");
+                    texte_chiffre_1.setText("0");
                     getContentPane().add(texte_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 20, -1));
 
-                    texte_chiffre_2.setText("2");
+                    texte_chiffre_2.setText("0");
                     getContentPane().add(texte_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 20, -1));
 
-                    texte_chiffre_3.setText("3");
+                    texte_chiffre_3.setText("0");
                     getContentPane().add(texte_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 20, -1));
 
                     bouton_tester.setText("Tester");
@@ -268,6 +268,8 @@ public class fenetre_cadenas extends javax.swing.JFrame {
         else {
             texte_intro.setText("Vous avez perdu");
             nbEssais=10; 
+            texte_score.setText(nbEssais+" sur 10");
+            return;
         }
         if (a.getCase1()==nbCourant0){
             nbExacts++;
@@ -301,7 +303,7 @@ public class fenetre_cadenas extends javax.swing.JFrame {
             nbExacts++;
         }
         else if (nbCourant3<a.getCase4()){
-            nbExacts++;
+            nbBas++;
         }
         else {
             nbHauts++;
