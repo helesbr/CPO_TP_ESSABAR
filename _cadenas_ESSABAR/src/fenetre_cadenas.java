@@ -314,6 +314,8 @@ public class fenetre_cadenas extends javax.swing.JFrame {
             up_chiffre_4.setEnabled(false);
             down_chiffre_4.setEnabled(false);
             bouton_tester.setEnabled(false);
+            frame_victoire v = new frame_victoire();
+            v.setVisible(true);
             return;
         } else {
             nbEssais++;
