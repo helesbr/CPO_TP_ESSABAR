@@ -17,6 +17,7 @@ public class fenetre_cadenas extends javax.swing.JFrame {
     private int nbExacts;
     private int nbHauts;
     private int nbBas;
+    private int
     chiffres a;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(fenetre_cadenas.class.getName());
 
@@ -39,18 +40,7 @@ public class fenetre_cadenas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        up_chiffre_1 = new javax.swing.JButton();
-        up_chiffre_2 = new javax.swing.JButton();
-        up_chiffre_3 = new javax.swing.JButton();
-        down_chiffre_1 = new javax.swing.JButton();
-        down_chiffre_2 = new javax.swing.JButton();
-        down_chiffre_3 = new javax.swing.JButton();
-        down_chiffre_4 = new javax.swing.JButton();
         texte_intro = new javax.swing.JLabel();
-        texte_chiffre_0 = new javax.swing.JLabel();
-        texte_chiffre_1 = new javax.swing.JLabel();
-        texte_chiffre_2 = new javax.swing.JLabel();
-        texte_chiffre_3 = new javax.swing.JLabel();
         bouton_tester = new javax.swing.JButton();
         texte_nb_chiffres_exacts = new javax.swing.JLabel();
         texte_lbl_nb_chiffres_exacts = new javax.swing.JLabel();
@@ -61,26 +51,71 @@ public class fenetre_cadenas extends javax.swing.JFrame {
         texte_lbl_nb_chiffres_haut = new javax.swing.JLabel();
         texte_nb_chiffres_bas = new javax.swing.JLabel();
         texte_lbl_nb_chiffres_bas = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         up_chiffre_4 = new javax.swing.JButton();
+        up_chiffre_1 = new javax.swing.JButton();
+        up_chiffre_3 = new javax.swing.JButton();
+        up_chiffre_2 = new javax.swing.JButton();
+        texte_chiffre_3 = new javax.swing.JLabel();
+        texte_chiffre_1 = new javax.swing.JLabel();
+        texte_chiffre_0 = new javax.swing.JLabel();
+        texte_chiffre_2 = new javax.swing.JLabel();
+        down_chiffre_3 = new javax.swing.JButton();
+        down_chiffre_4 = new javax.swing.JButton();
+        down_chiffre_1 = new javax.swing.JButton();
+        down_chiffre_2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        up_chiffre_1.setText("/\\");
-            up_chiffre_1.addActionListener(new java.awt.event.ActionListener() {
+        texte_intro.setText("Trouvez le bon code en moins de 10 tentatives ! ");
+
+        bouton_tester.setText("Tester");
+        bouton_tester.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bouton_testerActionPerformed(evt);
+            }
+        });
+
+        texte_nb_chiffres_exacts.setText("Nombre de chiffres exacts : ");
+
+        texte_lbl_nb_chiffres_exacts.setText("0");
+
+        texte_nb_chiffres_haut.setText("Nombre de chiffres trop hauts : ");
+
+        texte_score.setText("0 sur 10");
+
+        texte_tentatives.setText("Tentatives");
+
+        bouton_recommencer.setText("Recommencer");
+        bouton_recommencer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bouton_recommencerActionPerformed(evt);
+            }
+        });
+
+        texte_lbl_nb_chiffres_haut.setText("0");
+
+        texte_nb_chiffres_bas.setText("Nombre de chiffres trop bas : ");
+
+        texte_lbl_nb_chiffres_bas.setText("0");
+
+        jPanel1.setLayout(new java.awt.GridLayout(3, 4, 20, 20));
+
+        up_chiffre_4.setText("/\\");
+            up_chiffre_4.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    up_chiffre_1ActionPerformed(evt);
+                    up_chiffre_4ActionPerformed(evt);
                 }
             });
-            getContentPane().add(up_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 80, -1));
+            jPanel1.add(up_chiffre_4);
 
-            up_chiffre_2.setText("/\\");
-                up_chiffre_2.addActionListener(new java.awt.event.ActionListener() {
+            up_chiffre_1.setText("/\\");
+                up_chiffre_1.addActionListener(new java.awt.event.ActionListener() {
                     public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        up_chiffre_2ActionPerformed(evt);
+                        up_chiffre_1ActionPerformed(evt);
                     }
                 });
-                getContentPane().add(up_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 80, -1));
+                jPanel1.add(up_chiffre_1);
 
                 up_chiffre_3.setText("/\\");
                     up_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
@@ -88,102 +123,142 @@ public class fenetre_cadenas extends javax.swing.JFrame {
                             up_chiffre_3ActionPerformed(evt);
                         }
                     });
-                    getContentPane().add(up_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 80, -1));
+                    jPanel1.add(up_chiffre_3);
 
-                    down_chiffre_1.setText("\\/");
-                    down_chiffre_1.addActionListener(new java.awt.event.ActionListener() {
-                        public void actionPerformed(java.awt.event.ActionEvent evt) {
-                            down_chiffre_1ActionPerformed(evt);
-                        }
-                    });
-                    getContentPane().add(down_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 75, -1));
-
-                    down_chiffre_2.setText("\\/");
-                    down_chiffre_2.addActionListener(new java.awt.event.ActionListener() {
-                        public void actionPerformed(java.awt.event.ActionEvent evt) {
-                            down_chiffre_2ActionPerformed(evt);
-                        }
-                    });
-                    getContentPane().add(down_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 75, -1));
-
-                    down_chiffre_3.setText("\\/");
-                    down_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
-                        public void actionPerformed(java.awt.event.ActionEvent evt) {
-                            down_chiffre_3ActionPerformed(evt);
-                        }
-                    });
-                    getContentPane().add(down_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 75, -1));
-
-                    down_chiffre_4.setText("\\/");
-                    down_chiffre_4.addActionListener(new java.awt.event.ActionListener() {
-                        public void actionPerformed(java.awt.event.ActionEvent evt) {
-                            down_chiffre_4ActionPerformed(evt);
-                        }
-                    });
-                    getContentPane().add(down_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 75, -1));
-
-                    texte_intro.setText("Trouvez le bon code en moins de 10 tentatives ! ");
-                    getContentPane().add(texte_intro, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 6, 305, -1));
-
-                    texte_chiffre_0.setText("0");
-                    getContentPane().add(texte_chiffre_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 142, 20, -1));
-
-                    texte_chiffre_1.setText("0");
-                    getContentPane().add(texte_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 20, -1));
-
-                    texte_chiffre_2.setText("0");
-                    getContentPane().add(texte_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 20, -1));
-
-                    texte_chiffre_3.setText("0");
-                    getContentPane().add(texte_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 20, -1));
-
-                    bouton_tester.setText("Tester");
-                    bouton_tester.addActionListener(new java.awt.event.ActionListener() {
-                        public void actionPerformed(java.awt.event.ActionEvent evt) {
-                            bouton_testerActionPerformed(evt);
-                        }
-                    });
-                    getContentPane().add(bouton_tester, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, -1, -1));
-
-                    texte_nb_chiffres_exacts.setText("Nombre de chiffres exacts : ");
-                    getContentPane().add(texte_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
-
-                    texte_lbl_nb_chiffres_exacts.setText("0");
-                    getContentPane().add(texte_lbl_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, -1, -1));
-
-                    texte_nb_chiffres_haut.setText("Nombre de chiffres trop hauts : ");
-                    getContentPane().add(texte_nb_chiffres_haut, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, -1, 20));
-
-                    texte_score.setText("0 sur 10");
-                    getContentPane().add(texte_score, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, -1, -1));
-
-                    texte_tentatives.setText("Tentatives");
-                    getContentPane().add(texte_tentatives, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, -1, -1));
-
-                    bouton_recommencer.setText("Recommencer");
-                    bouton_recommencer.addActionListener(new java.awt.event.ActionListener() {
-                        public void actionPerformed(java.awt.event.ActionEvent evt) {
-                            bouton_recommencerActionPerformed(evt);
-                        }
-                    });
-                    getContentPane().add(bouton_recommencer, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, -1, -1));
-
-                    texte_lbl_nb_chiffres_haut.setText("0");
-                    getContentPane().add(texte_lbl_nb_chiffres_haut, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, -1, -1));
-
-                    texte_nb_chiffres_bas.setText("Nombre de chiffres trop bas : ");
-                    getContentPane().add(texte_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
-
-                    texte_lbl_nb_chiffres_bas.setText("0");
-                    getContentPane().add(texte_lbl_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, -1, -1));
-
-                    up_chiffre_4.setText("/\\");
-                        up_chiffre_4.addActionListener(new java.awt.event.ActionListener() {
+                    up_chiffre_2.setText("/\\");
+                        up_chiffre_2.addActionListener(new java.awt.event.ActionListener() {
                             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                up_chiffre_4ActionPerformed(evt);
+                                up_chiffre_2ActionPerformed(evt);
                             }
                         });
-                        getContentPane().add(up_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 80, -1));
+                        jPanel1.add(up_chiffre_2);
+
+                        texte_chiffre_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                        texte_chiffre_3.setText("0");
+                        texte_chiffre_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+                        jPanel1.add(texte_chiffre_3);
+
+                        texte_chiffre_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                        texte_chiffre_1.setText("0");
+                        texte_chiffre_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+                        jPanel1.add(texte_chiffre_1);
+
+                        texte_chiffre_0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                        texte_chiffre_0.setText("0");
+                        texte_chiffre_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+                        jPanel1.add(texte_chiffre_0);
+
+                        texte_chiffre_2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                        texte_chiffre_2.setText("0");
+                        texte_chiffre_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+                        jPanel1.add(texte_chiffre_2);
+
+                        down_chiffre_3.setText("\\/");
+                        down_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                down_chiffre_3ActionPerformed(evt);
+                            }
+                        });
+                        jPanel1.add(down_chiffre_3);
+
+                        down_chiffre_4.setText("\\/");
+                        down_chiffre_4.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                down_chiffre_4ActionPerformed(evt);
+                            }
+                        });
+                        jPanel1.add(down_chiffre_4);
+
+                        down_chiffre_1.setText("\\/");
+                        down_chiffre_1.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                down_chiffre_1ActionPerformed(evt);
+                            }
+                        });
+                        jPanel1.add(down_chiffre_1);
+
+                        down_chiffre_2.setText("\\/");
+                        down_chiffre_2.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                down_chiffre_2ActionPerformed(evt);
+                            }
+                        });
+                        jPanel1.add(down_chiffre_2);
+
+                        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+                        getContentPane().setLayout(layout);
+                        layout.setHorizontalGroup(
+                            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(texte_intro, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(bouton_tester, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(texte_nb_chiffres_bas)
+                                                        .addGap(30, 30, 30)
+                                                        .addComponent(texte_lbl_nb_chiffres_bas)
+                                                        .addGap(33, 33, 33)
+                                                        .addComponent(bouton_recommencer))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(texte_nb_chiffres_exacts)
+                                                                .addGap(41, 41, 41)
+                                                                .addComponent(texte_lbl_nb_chiffres_exacts))
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(texte_nb_chiffres_haut)
+                                                                .addGap(19, 19, 19)
+                                                                .addComponent(texte_lbl_nb_chiffres_haut)))
+                                                        .addGap(51, 51, 51)
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                            .addComponent(texte_score)
+                                                            .addComponent(texte_tentatives))))
+                                                .addGap(0, 0, Short.MAX_VALUE)))
+                                        .addGap(35, 35, 35))))
+                        );
+                        layout.setVerticalGroup(
+                            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(texte_intro)
+                                        .addGap(12, 12, 12)
+                                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(101, 101, 101)
+                                        .addComponent(bouton_tester, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(texte_nb_chiffres_exacts)
+                                    .addComponent(texte_lbl_nb_chiffres_exacts)
+                                    .addComponent(texte_tentatives, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(4, 4, 4)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(texte_nb_chiffres_haut, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(texte_lbl_nb_chiffres_haut)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(texte_score)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(texte_nb_chiffres_bas)
+                                    .addComponent(texte_lbl_nb_chiffres_bas)
+                                    .addComponent(bouton_recommencer))
+                                .addContainerGap(8, Short.MAX_VALUE))
+                        );
 
                         pack();
                     }// </editor-fold>//GEN-END:initComponents
@@ -399,6 +474,7 @@ public class fenetre_cadenas extends javax.swing.JFrame {
     private javax.swing.JButton down_chiffre_2;
     private javax.swing.JButton down_chiffre_3;
     private javax.swing.JButton down_chiffre_4;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel texte_chiffre_0;
     private javax.swing.JLabel texte_chiffre_1;
     private javax.swing.JLabel texte_chiffre_2;
