@@ -56,10 +56,10 @@ public class fenetre_cadenas extends javax.swing.JFrame {
         texte_nb_chiffres_bas = new javax.swing.JLabel();
         texte_lbl_nb_chiffres_bas = new javax.swing.JLabel();
         chiffres = new javax.swing.JPanel();
-        texte_chiffre_3 = new javax.swing.JLabel();
-        texte_chiffre_1 = new javax.swing.JLabel();
         texte_chiffre_0 = new javax.swing.JLabel();
+        texte_chiffre_1 = new javax.swing.JLabel();
         texte_chiffre_2 = new javax.swing.JLabel();
+        texte_chiffre_3 = new javax.swing.JLabel();
         boutons_hauts = new javax.swing.JPanel();
         up_chiffre_4 = new javax.swing.JButton();
         up_chiffre_2 = new javax.swing.JButton();
@@ -122,12 +122,11 @@ public class fenetre_cadenas extends javax.swing.JFrame {
 
         chiffres.setLayout(new java.awt.GridLayout(1, 4, 20, 0));
 
-        texte_chiffre_3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        texte_chiffre_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        texte_chiffre_3.setText("0");
-        texte_chiffre_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        texte_chiffre_3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        chiffres.add(texte_chiffre_3);
+        texte_chiffre_0.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        texte_chiffre_0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        texte_chiffre_0.setText("0");
+        texte_chiffre_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        chiffres.add(texte_chiffre_0);
 
         texte_chiffre_1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         texte_chiffre_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -135,17 +134,18 @@ public class fenetre_cadenas extends javax.swing.JFrame {
         texte_chiffre_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         chiffres.add(texte_chiffre_1);
 
-        texte_chiffre_0.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        texte_chiffre_0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        texte_chiffre_0.setText("0");
-        texte_chiffre_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        chiffres.add(texte_chiffre_0);
-
         texte_chiffre_2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         texte_chiffre_2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         texte_chiffre_2.setText("0");
         texte_chiffre_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         chiffres.add(texte_chiffre_2);
+
+        texte_chiffre_3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        texte_chiffre_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        texte_chiffre_3.setText("0");
+        texte_chiffre_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        texte_chiffre_3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        chiffres.add(texte_chiffre_3);
 
         getContentPane().add(chiffres, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 341, 61));
 
@@ -291,7 +291,7 @@ public class fenetre_cadenas extends javax.swing.JFrame {
         nbExacts = 0;
         nbHauts = 0;
         nbBas = 0;
-        if (nbEssais>=nb_tentatives){
+        if (nbEssais>nb_tentatives){
             texte_intro.setText("Vous avez perdu");
             up_chiffre_1.setEnabled(false);
             down_chiffre_1.setEnabled(false);
