@@ -236,12 +236,12 @@
         <Property name="rows" type="int" value="1"/>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="up_chiffre_4">
+        <Component class="javax.swing.JButton" name="up_chiffre_1">
           <Properties>
             <Property name="text" type="java.lang.String" value="/\u005c" containsInvalidXMLChars="true"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="up_chiffre_4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="up_chiffre_1ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="up_chiffre_2">
@@ -252,20 +252,20 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="up_chiffre_2ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="up_chiffre_1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="/\u005c" containsInvalidXMLChars="true"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="up_chiffre_1ActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JButton" name="up_chiffre_3">
           <Properties>
             <Property name="text" type="java.lang.String" value="/\u005c" containsInvalidXMLChars="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="up_chiffre_3ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="up_chiffre_4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="/\u005c" containsInvalidXMLChars="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="up_chiffre_4ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -283,12 +283,12 @@
         <Property name="rows" type="int" value="1"/>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="down_chiffre_4">
+        <Component class="javax.swing.JButton" name="down_chiffre_1">
           <Properties>
             <Property name="text" type="java.lang.String" value="\u005c/" containsInvalidXMLChars="true"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="down_chiffre_4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="down_chiffre_1ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="down_chiffre_2">
@@ -299,20 +299,20 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="down_chiffre_2ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="down_chiffre_1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="\u005c/" containsInvalidXMLChars="true"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="down_chiffre_1ActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JButton" name="down_chiffre_3">
           <Properties>
             <Property name="text" type="java.lang.String" value="\u005c/" containsInvalidXMLChars="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="down_chiffre_3ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="down_chiffre_4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="\u005c/" containsInvalidXMLChars="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="down_chiffre_4ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

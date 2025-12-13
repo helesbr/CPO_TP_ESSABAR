@@ -61,15 +61,15 @@ public class fenetre_cadenas extends javax.swing.JFrame {
         texte_chiffre_2 = new javax.swing.JLabel();
         texte_chiffre_3 = new javax.swing.JLabel();
         boutons_hauts = new javax.swing.JPanel();
-        up_chiffre_4 = new javax.swing.JButton();
-        up_chiffre_2 = new javax.swing.JButton();
         up_chiffre_1 = new javax.swing.JButton();
+        up_chiffre_2 = new javax.swing.JButton();
         up_chiffre_3 = new javax.swing.JButton();
+        up_chiffre_4 = new javax.swing.JButton();
         boutons_bas = new javax.swing.JPanel();
-        down_chiffre_4 = new javax.swing.JButton();
-        down_chiffre_2 = new javax.swing.JButton();
         down_chiffre_1 = new javax.swing.JButton();
+        down_chiffre_2 = new javax.swing.JButton();
         down_chiffre_3 = new javax.swing.JButton();
+        down_chiffre_4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -151,13 +151,13 @@ public class fenetre_cadenas extends javax.swing.JFrame {
 
         boutons_hauts.setLayout(new java.awt.GridLayout(1, 4, 20, 0));
 
-        up_chiffre_4.setText("/\\");
-            up_chiffre_4.addActionListener(new java.awt.event.ActionListener() {
+        up_chiffre_1.setText("/\\");
+            up_chiffre_1.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    up_chiffre_4ActionPerformed(evt);
+                    up_chiffre_1ActionPerformed(evt);
                 }
             });
-            boutons_hauts.add(up_chiffre_4);
+            boutons_hauts.add(up_chiffre_1);
 
             up_chiffre_2.setText("/\\");
                 up_chiffre_2.addActionListener(new java.awt.event.ActionListener() {
@@ -167,41 +167,25 @@ public class fenetre_cadenas extends javax.swing.JFrame {
                 });
                 boutons_hauts.add(up_chiffre_2);
 
-                up_chiffre_1.setText("/\\");
-                    up_chiffre_1.addActionListener(new java.awt.event.ActionListener() {
+                up_chiffre_3.setText("/\\");
+                    up_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
-                            up_chiffre_1ActionPerformed(evt);
+                            up_chiffre_3ActionPerformed(evt);
                         }
                     });
-                    boutons_hauts.add(up_chiffre_1);
+                    boutons_hauts.add(up_chiffre_3);
 
-                    up_chiffre_3.setText("/\\");
-                        up_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
+                    up_chiffre_4.setText("/\\");
+                        up_chiffre_4.addActionListener(new java.awt.event.ActionListener() {
                             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                up_chiffre_3ActionPerformed(evt);
+                                up_chiffre_4ActionPerformed(evt);
                             }
                         });
-                        boutons_hauts.add(up_chiffre_3);
+                        boutons_hauts.add(up_chiffre_4);
 
                         getContentPane().add(boutons_hauts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 31, 340, -1));
 
                         boutons_bas.setLayout(new java.awt.GridLayout(1, 4, 20, 0));
-
-                        down_chiffre_4.setText("\\/");
-                        down_chiffre_4.addActionListener(new java.awt.event.ActionListener() {
-                            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                down_chiffre_4ActionPerformed(evt);
-                            }
-                        });
-                        boutons_bas.add(down_chiffre_4);
-
-                        down_chiffre_2.setText("\\/");
-                        down_chiffre_2.addActionListener(new java.awt.event.ActionListener() {
-                            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                down_chiffre_2ActionPerformed(evt);
-                            }
-                        });
-                        boutons_bas.add(down_chiffre_2);
 
                         down_chiffre_1.setText("\\/");
                         down_chiffre_1.addActionListener(new java.awt.event.ActionListener() {
@@ -211,6 +195,14 @@ public class fenetre_cadenas extends javax.swing.JFrame {
                         });
                         boutons_bas.add(down_chiffre_1);
 
+                        down_chiffre_2.setText("\\/");
+                        down_chiffre_2.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                down_chiffre_2ActionPerformed(evt);
+                            }
+                        });
+                        boutons_bas.add(down_chiffre_2);
+
                         down_chiffre_3.setText("\\/");
                         down_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
                             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -218,6 +210,14 @@ public class fenetre_cadenas extends javax.swing.JFrame {
                             }
                         });
                         boutons_bas.add(down_chiffre_3);
+
+                        down_chiffre_4.setText("\\/");
+                        down_chiffre_4.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                down_chiffre_4ActionPerformed(evt);
+                            }
+                        });
+                        boutons_bas.add(down_chiffre_4);
 
                         getContentPane().add(boutons_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 340, -1));
 
@@ -291,7 +291,7 @@ public class fenetre_cadenas extends javax.swing.JFrame {
         nbExacts = 0;
         nbHauts = 0;
         nbBas = 0;
-        if (nbEssais>nb_tentatives){
+        if (nbEssais==nb_tentatives){
             texte_intro.setText("Vous avez perdu");
             up_chiffre_1.setEnabled(false);
             down_chiffre_1.setEnabled(false);
