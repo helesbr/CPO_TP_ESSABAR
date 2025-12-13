@@ -8,11 +8,11 @@
  * @author helia
  */
 public class chiffres {
-    
-private int case1;  
-private int case2;
-private int case3;
-private int case4;    
+
+    private int case1;
+    private int case2;
+    private int case3;
+    private int case4;
 
     public int getCase1() {
         return case1;
@@ -30,10 +30,10 @@ private int case4;
         return case4;
     }
 
-    public void chiffreAleat(){
-        case1 = (int)(Math.random()*10);
-        case2 = (int)(Math.random()*10);
-        case3 = (int)(Math.random()*10);
-        case4 = (int)(Math.random()*10);
+    public void chiffreAleat() {
+        case1 = (int) (Math.random() * 10);
+        case2 = (int) (Math.random() * 10);
+        case3 = (int) (Math.random() * 10);
+        case4 = (int) (Math.random() * 10);
     }
 }

@@ -27,49 +27,49 @@ public class fenetre_cadenas extends javax.swing.JFrame {
     public fenetre_cadenas(int nb_tentatives) {
         this.nb_tentatives = nb_tentatives;
         frame_accueil b = new frame_accueil();
-            b.setVisible(true);
+        b.setVisible(true);
         initComponents();
         a = new chiffres();
         a.chiffreAleat();
-        texte_score.setText("0 sur "+nb_tentatives);
-        texte_intro.setText("Trouvez le bon code en moins de "+ nb_tentatives+ " tentatives ! ");
+        texte_score.setText("0 sur " + nb_tentatives);
+        texte_intro.setText("Trouvez le bon code en moins de " + nb_tentatives + " tentatives ! ");
     }
+
     public void recommencerJeu() {
-    nbCourant0 = 0;
-    nbCourant1 = 0;
-    nbCourant2 = 0;
-    nbCourant3 = 0;
+        nbCourant0 = 0;
+        nbCourant1 = 0;
+        nbCourant2 = 0;
+        nbCourant3 = 0;
 
-    texte_chiffre_0.setText("0");
-    texte_chiffre_1.setText("0");
-    texte_chiffre_2.setText("0");
-    texte_chiffre_3.setText("0");
+        texte_chiffre_0.setText("0");
+        texte_chiffre_1.setText("0");
+        texte_chiffre_2.setText("0");
+        texte_chiffre_3.setText("0");
 
-    nbEssais = 0;
-    nbExacts = 0;
-    nbHauts = 0;
-    nbBas = 0;
+        nbEssais = 0;
+        nbExacts = 0;
+        nbHauts = 0;
+        nbBas = 0;
 
-    texte_score.setText("0 sur " + nb_tentatives);
-    texte_lbl_nb_chiffres_exacts.setText("0");
-    texte_lbl_nb_chiffres_haut.setText("0");
-    texte_lbl_nb_chiffres_bas.setText("0");
+        texte_score.setText("0 sur " + nb_tentatives);
+        texte_lbl_nb_chiffres_exacts.setText("0");
+        texte_lbl_nb_chiffres_haut.setText("0");
+        texte_lbl_nb_chiffres_bas.setText("0");
 
-    texte_intro.setText("Trouvez le bon code en moins de " + nb_tentatives + " tentatives !");
+        texte_intro.setText("Trouvez le bon code en moins de " + nb_tentatives + " tentatives !");
 
-    up_chiffre_1.setEnabled(true);
-    down_chiffre_1.setEnabled(true);
-    up_chiffre_2.setEnabled(true);
-    down_chiffre_2.setEnabled(true);
-    up_chiffre_3.setEnabled(true);
-    down_chiffre_3.setEnabled(true);
-    up_chiffre_4.setEnabled(true);
-    down_chiffre_4.setEnabled(true);
-    bouton_tester.setEnabled(true);
+        up_chiffre_1.setEnabled(true);
+        down_chiffre_1.setEnabled(true);
+        up_chiffre_2.setEnabled(true);
+        down_chiffre_2.setEnabled(true);
+        up_chiffre_3.setEnabled(true);
+        down_chiffre_3.setEnabled(true);
+        up_chiffre_4.setEnabled(true);
+        down_chiffre_4.setEnabled(true);
+        bouton_tester.setEnabled(true);
 
-    a.chiffreAleat();
-}
-
+        a.chiffreAleat();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -328,7 +328,7 @@ public class fenetre_cadenas extends javax.swing.JFrame {
         nbHauts = 0;
         nbBas = 0;
         nbEssais++;
-        
+
         if (a.getCase1() == nbCourant0) {
             nbExacts++;
         } else if (nbCourant0 < a.getCase1()) {
@@ -378,12 +378,12 @@ public class fenetre_cadenas extends javax.swing.JFrame {
             v.setVisible(true);
             return;
         } else {
-            texte_score.setText(nbEssais + " sur "+nb_tentatives);
+            texte_score.setText(nbEssais + " sur " + nb_tentatives);
             texte_lbl_nb_chiffres_exacts.setText(nbExacts + "");
             texte_lbl_nb_chiffres_haut.setText(nbHauts + "");
             texte_lbl_nb_chiffres_bas.setText(nbBas + "");
         }
-        if (nbEssais>=nb_tentatives){
+        if (nbEssais >= nb_tentatives) {
             texte_intro.setText("Vous avez perdu");
             up_chiffre_1.setEnabled(false);
             down_chiffre_1.setEnabled(false);
@@ -403,7 +403,7 @@ public class fenetre_cadenas extends javax.swing.JFrame {
 
     private void bouton_recommencerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_recommencerActionPerformed
         frame_accueil b = new frame_accueil();
-            b.setVisible(true);
+        b.setVisible(true);
         recommencerJeu();
 
     }//GEN-LAST:event_bouton_recommencerActionPerformed

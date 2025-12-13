@@ -5,13 +5,12 @@ import javax.swing.JTextField;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author helia
  */
 public class frame_accueil extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(frame_accueil.class.getName());
 
     /**
@@ -92,7 +91,7 @@ public class frame_accueil extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String resultat = nb_tentatives.getText();
         int resultEntier = Integer.parseInt(resultat);
-        System.out.println("result :"+resultEntier);
+        System.out.println("result :" + resultEntier);
         fenetre_cadenas i = new fenetre_cadenas(resultEntier);
         i.setVisible(true);
         this.dispose();

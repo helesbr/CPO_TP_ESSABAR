@@ -8,15 +8,20 @@
  * @author helia
  */
 public class frame_defaite extends javax.swing.JFrame {
-    
+
+    private fenetre_cadenas parent;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(frame_defaite.class.getName());
 
     /**
      * Creates new form frame_defaite
+     *
+     * @param parent
+     * @param a
      */
-    public frame_defaite(chiffres a) {
+    public frame_defaite(fenetre_cadenas parent, chiffres a) {
         initComponents();
-        reponse.setText("La réponse était : "+a.getCase1()+ a.getCase2()+ a.getCase3()+ a.getCase4());
+        this.parent = parent;
+        reponse.setText("La réponse était : " + a.getCase1() + a.getCase2() + a.getCase3() + a.getCase4());
     }
 
     /**
@@ -30,12 +35,20 @@ public class frame_defaite extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         reponse = new javax.swing.JLabel();
+        bouton_recommencer = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Vous avez perdu !");
 
         reponse.setText("jLabel2");
+
+        bouton_recommencer.setText("Recommencer");
+        bouton_recommencer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bouton_recommencerActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -45,7 +58,8 @@ public class frame_defaite extends javax.swing.JFrame {
                 .addGap(112, 112, 112)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(reponse, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(reponse, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bouton_recommencer))
                 .addContainerGap(152, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -55,17 +69,28 @@ public class frame_defaite extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(40, 40, 40)
                 .addComponent(reponse)
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(bouton_recommencer)
+                .addContainerGap(81, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void bouton_recommencerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_recommencerActionPerformed
+        frame_accueil b = new frame_accueil();
+        b.setVisible(true);
+        parent.recommencerJeu();
+        this.dispose();
+
+    }//GEN-LAST:event_bouton_recommencerActionPerformed
+
     /**
      * @param args the command line arguments
      */
-   
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bouton_recommencer;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel reponse;
     // End of variables declaration//GEN-END:variables
