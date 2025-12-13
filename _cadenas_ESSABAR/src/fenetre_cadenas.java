@@ -32,7 +32,7 @@ public class fenetre_cadenas extends javax.swing.JFrame {
         a = new chiffres();
         a.chiffreAleat();
         texte_score.setText("0 sur "+nb_tentatives);
-
+        texte_intro.setText("Trouvez le bon code en moins de "+ nb_tentatives+ " tentatives ! ");
     }
 
     /**
@@ -365,6 +365,8 @@ public class fenetre_cadenas extends javax.swing.JFrame {
     }//GEN-LAST:event_bouton_testerActionPerformed
 
     private void bouton_recommencerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_recommencerActionPerformed
+        frame_accueil b = new frame_accueil();
+            b.setVisible(true);
         up_chiffre_1.setEnabled(true);
             down_chiffre_1.setEnabled(true);
             up_chiffre_2.setEnabled(true);
@@ -387,7 +389,7 @@ public class fenetre_cadenas extends javax.swing.JFrame {
         nbExacts = 0;
         nbHauts = 0;
         nbBas = 0;
-        texte_intro.setText("Trouvez le bon code en moins de 10 tentatives ! ");
+        texte_intro.setText("Trouvez le bon code en moins de "+ nb_tentatives+ " tentatives ! ");
             texte_lbl_nb_chiffres_exacts.setText(nbExacts + "");
             texte_lbl_nb_chiffres_haut.setText(nbHauts + "");
             texte_lbl_nb_chiffres_bas.setText(nbBas + "");
